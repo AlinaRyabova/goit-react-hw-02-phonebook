@@ -18,5 +18,5 @@
 
 .button:hover,
 .button:focus {
-  background-color: red;
+  background-color: rgb(146, 6, 120);
 }
