@@ -17,12 +17,22 @@ class ContactForm extends Component {
   };
 
   handleSubmit = e => {
-    const { name, number } = this.state;
     e.preventDefault();
+    const { name, number } = this.state;
+
+    if (name === '') {
+      alert(`Введіть, будь ласка, ім'я контакту.`);
+      return;
+    }
+
+    if (number === '') {
+      alert(`Введіть, будь ласка, номер телефону контакту`);
+      return;
+    }
+
     this.props.onSubmit(name, number);
     this.reset();
   };
-
   reset() {
     this.setState({
       name: '',
